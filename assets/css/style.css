@@ -7,6 +7,19 @@ Author URI: http://bootstrapthemes.co
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.cvDownload{
+    margin-top: 5%;
+}
+.containerContact{
+    display: flex;
+    flex-direction: row;
+}
+.containerContact .row{
+    flex:100%;
+}
+.containerContact div{
+    flex: 30%;
+}
 .main_home *{
     font-family: 'playfair_displaybold';
 }
@@ -307,6 +320,7 @@ ul{
 .video_overlay {
     width: 100%;
     height: auto;
+    color: white;
 }
 .footer_overlay {
     background-color: rgba(58, 57, 57, 0.277);
