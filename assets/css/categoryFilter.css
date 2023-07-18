@@ -1,0 +1,25 @@
+/* The "show" class is added to the filtered elements */
+  .category-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .category-row,
+  .category-row > .category-column {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .category-column {
+    width: 16.66%;
+    display: none; /* Hide columns by default */
+  }
+  
+  /* Clear floats after rows */
+  .category-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }  
