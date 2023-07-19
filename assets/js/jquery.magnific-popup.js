@@ -485,7 +485,6 @@ MagnificPopup.prototype = {
 
 		// Detach and perform modifications
 		mfp.contentContainer.detach();
-
 		if(mfp.content)
 			mfp.content.detach();
 
@@ -1814,12 +1813,22 @@ $.magnificPopup.registerModule('gallery', {
 		}, 
 		next: function() {
 			mfp.direction = true;
-			mfp.index = _getLoopedId(mfp.index + 1);
+			do{
+				mfp.index = _getLoopedId(mfp.index + 1);
+				var attr;
+				if(mfp.items[mfp.index].el) attr = mfp.items[mfp.index].el[0].getAttribute("data-show");
+				else attr = mfp.items[mfp.index].getAttribute("data-show");
+			}while( attr === "false");
+			mfp.wantedItem = mfp.items[mfp.index];
 			mfp.updateItemHTML();
 		},
 		prev: function() {
 			mfp.direction = false;
-			mfp.index = _getLoopedId(mfp.index - 1);
+			do{
+				mfp.index = _getLoopedId(mfp.index - 1);
+				if(mfp.items[mfp.index].el) attr = mfp.items[mfp.index].el[0].getAttribute("data-show");
+				else attr = mfp.items[mfp.index].getAttribute("data-show");
+			}while( attr === "false");
 			mfp.updateItemHTML();
 		},
 		goTo: function(newIndex) {
