@@ -41,14 +41,13 @@ jQuery(document).ready(function ($) {
     wow.init();
 
 
-
     /* ---------------------------------------------------------------------
      Carousel
      ---------------------------------------------------------------------= */
 
     $('.main_home_slider').owlCarousel({
         responsiveClass: true,
-        autoplay: false,
+        autoplay: true,
         items: 1,
         loop: true,
         dots: true,
@@ -185,6 +184,8 @@ function w3AddClass(element, name) {
   for (i = 0; i < arr2.length; i++) {
     if (arr1.indexOf(arr2[i]) == -1) {
       element.className += " " + arr2[i];
+      var aElement = element.querySelector(".grid_item_overlay > a");
+      aElement.setAttribute("data-show", "true");
     }
   }
 }
@@ -197,6 +198,10 @@ function w3RemoveClass(element, name) {
   for (i = 0; i < arr2.length; i++) {
     while (arr1.indexOf(arr2[i]) > -1) {
       arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+    var aElement = element.querySelector(".grid_item_overlay > a");
+    if (aElement) {
+      aElement.setAttribute("data-show", "false");
     }
   }
   element.className = arr1.join(" ");

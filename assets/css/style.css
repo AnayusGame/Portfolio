@@ -344,7 +344,7 @@ Separator
     height: 1px;
     width: 127px;
     margin: 20px auto;
-    background: #00e0d0;
+    background: #efd13a;
 }
 .whiseparator {
     height: 10px;
@@ -403,7 +403,7 @@ Button
     padding: .8em;
     height: 45px;
     text-align: center;
-    color: #00e0d0;
+    color: #e09500;
     letter-spacing: 1px;
     margin: 0;
     font-size: 20px;
@@ -411,15 +411,15 @@ Button
     margin-top: 20px;
     background-color: transparent;
     transition: .5s;
-    border: 1px solid #00e0d0;
+    border: 1px solid #e09500;
     font-family: 'hammersmith_oneregular';
 
 }
 .btn:hover {
-    background-color:#00e0d0;
+    background-color:#e09500;
     color: #fff;
     text-decoration: none;
-    border: 1px solid #00e0d0;
+    border: 1px solid #e09500;
 }
 
 .btn-primary {
@@ -560,7 +560,7 @@ input::-ms-input-placeholder {
     z-index: 300;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    background-color:rgba(34, 61, 97, 0.64);
+    background-color:rgba(124, 80, 35, 0.82);
     -webkit-transition:all .3s;
     -moz-transition:all .3s;
     transition:all .3s;
@@ -580,14 +580,14 @@ input::-ms-input-placeholder {
     margin: 15px auto;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
-    color:#00e0d0;
+    color:#efd13a;
 }
 .main_menu_bg .navbar {}
 
 .main_menu_bg .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-    color: #00e0d0;
+    color: #efd13a;
     padding-bottom: 22px;
-    border-bottom: 1px solid #00e0d0;
+    border-bottom: 1px solid #efd13a;
     background: transparent;
 
 }
@@ -667,7 +667,7 @@ input::-ms-input-placeholder {
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: #00e0d0;
+    background: #efd13a;
 }
 .owl-theme .owl-dots .owl-dot span {
     -webkit-border-radius: 0px;
@@ -696,6 +696,8 @@ input::-ms-input-placeholder {
 .video{
     background: url(../images/videobg.png) no-repeat top center;
     background-size:cover;
+    height: auto;
+    background-position: center;
 }
 .video .main_video{
     padding: 200px 0px;
@@ -747,6 +749,7 @@ input::-ms-input-placeholder {
 /* Team section css */
 .team{
     background: url(../images/teambg.png) no-repeat center center;
+    background-size: cover;
 }
 .team .main_team{
 
